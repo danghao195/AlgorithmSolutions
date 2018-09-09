@@ -1,0 +1,28 @@
+#include <bits/stdc++.h> 
+using namespace std; 
+
+int main(){
+  ios::sync_with_stdio(false); 
+  cin.tie(0); 
+  cout.tie(0); 
+  int n , m ; 
+  int tmp; 
+  set<int> s; 
+  int res = 0 ; 
+  cin >> n ; 
+  for(int i = 0  ; i < n ; i++){
+    cin >> tmp; 
+    s.insert(tmp);
+  }
+  set<int>::iterator it; 
+  cin >> m ; 
+  for(int i = 0 ; i < m ; i++){
+    cin >> tmp; 
+    it = s.find(tmp); 
+    if (it != s.end()){
+      res++;
+    }
+  }
+  cout << res ; 
+  return 0 ; 
+}
